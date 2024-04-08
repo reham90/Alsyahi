@@ -22,14 +22,7 @@ $(document).ready(function () {
       $('body').removeClass('overflow');
     });
 
-    /// // search in mobile /////////
-    $('.fixed-search').click((e) => {
-      e.preventDefault();
-      $('.overlay-box').fadeToggle(300);
-      $('.search-section').toggleClass('search-open');
-      $('.fixed-search .open-search').toggleClass('close-search');
-      $('body').toggleClass('overflow');
-    });
+    
 
    
   }

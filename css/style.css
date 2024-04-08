@@ -424,7 +424,7 @@ html[dir="ltr"] .cats-dispaly .cat-li{
  border: 0;
  outline: none;
   position: absolute;
-  z-index: 9;
+  z-index: 8;
   top: 50%;
  padding: 0;
   inset-inline-start: 16px;
@@ -481,7 +481,7 @@ html[dir="ltr"] .search-icon{
   font-family: "Bahij_TheSansArabic-Bold";
 }
 .search-btn-2:hover{
-  background-color: var(--main-color);
+  background-color: rgb(240, 134, 46);
 }
 .search-btn-2:focus{
  border: 0;
@@ -840,12 +840,12 @@ html[dir="ltr"] .language:after {
 }
 .favourite-link {
   position: absolute;
-  top: 8px;
-  inset-inline-end: 5px;
+  top: 10px;
+  inset-inline-end: 10px;
   z-index: 9;
 }
 .cart-link{
-  top:48px !important;
+  top:47px !important;
 }
 .favourite-link-icon {
   display: flex;
@@ -874,7 +874,7 @@ html[dir="ltr"] .language:after {
   display: flex;
   width: 100%;
   overflow: hidden;
-  padding: 0 15px;
+ 
   margin-bottom: 10px;
   margin-top: 17px;
   justify-content: center;
@@ -1050,10 +1050,9 @@ html[dir="ltr"] .language:after {
 
 
 .banners{
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(6, 5vw);
-  grid-gap: 30px;
+display: flex;
+justify-content: space-between;
+gap:30px;
 }
 .banner-div{
  
@@ -1063,18 +1062,15 @@ html[dir="ltr"] .language:after {
 
 .banner-div img{
   transition: 0.5s;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+ 
 }
 .banner-div:hover img{
   transform: scale(1.05);
 }
-.banner-1{
-  grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 7;
+.small-banners{
+  display: flex;
+  flex-direction: column;
+  gap:30px;
 }
 .banner-2{
   grid-column-start: 5;
@@ -1262,7 +1258,7 @@ footer {
   outline: none;
 }
 .newsletter-button:hover {
-  background-color: var(--main-color);
+  background-color: rgb(240, 134, 46);
 }
 .social-media {
   list-style: none;
@@ -1503,7 +1499,29 @@ html[dir="rtl"] .footer-accordion.active:after {
 
 @media (max-width: 991px) {
   .nav-header .img-logo img {
-    max-width: 120px;
+    max-width: 130px;
+  }
+  .new-price{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-inline-end: 0;
+    margin-bottom: 5px;
+  }
+  .old-price{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+  }
+  .fav-link{
+    display: none !important;
+  }
+  .dropbtn i{
+    font-size: 30px;
+  }
+  .cart-icon i{
+    font-size: 30px;
   }
   .top-header .add-to{
     transform: scaleX(-1);
@@ -1515,7 +1533,9 @@ html[dir="rtl"] .footer-accordion.active:after {
     justify-content: center;
     text-align: center;
   }
-
+  .small-banners{
+    gap:15px;
+  }
  
 .language-linkk{
   position: absolute;
@@ -1720,7 +1740,7 @@ html[dir="ltr"] .language-linkk{
 
 @media (max-width: 991px) {
   body {
-    padding-top: 57px;
+    padding-top: 110px;
     position: relative;
   }
   .categories .swiper-wrapper{
@@ -1743,7 +1763,7 @@ html[dir="ltr"] .language-linkk{
     flex-direction: row-reverse;
   }
   .cart-list li:not(:last-child){
-    margin-inline-end: 12px;
+    margin-inline-end: 20px;
   }
   .search-open {
     top: 100px;
@@ -1755,9 +1775,21 @@ html[dir="ltr"] .language-linkk{
     border-radius: 20px;
     position: absolute;
   }
-  .search-section {
-    display: none;
-  }
+ .top-header{
+  min-height: 110px;
+ }
+ .first-part-header{
+  position: relative;
+  border-bottom: 0;
+ }
+ .fav-icon{
+  display: none;
+ }
+ .search-section {
+  width: 100%;
+  position: absolute;
+  top: 59px;
+}
   .img-logo{
     width: auto;
   }
@@ -1765,8 +1797,9 @@ html[dir="ltr"] .language-linkk{
   .header-icons .add-to {
     display: flex;
     order: 0;
-    margin-inline-start: 7px;
+    margin-inline-start: 20px;
     justify-content: flex-end;
+    width: 30px;
   
   }
   .cart-list li {
@@ -1779,10 +1812,13 @@ html[dir="ltr"] .language-linkk{
 
     display: flex;
     align-items: center;
-    margin-inline-start: 12px;
+   
     transition: all 0.3s ease-in-out;
     z-index: 9;
     color: #000;
+  }
+  .show-icons, .header-icons .add-to{
+    font-size: 30px;
   }
   .fixed-nav .fixed-logo {
     order: 1;
@@ -1994,10 +2030,8 @@ html[dir="ltr"] .language-linkk{
 
 @media only screen and (max-width: 994px) and (min-width: 700px) {
 
-  .categories-blocks {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px 15px;
+  .banners{
+    flex-wrap: nowrap;
   }
 
 .order-2 {
